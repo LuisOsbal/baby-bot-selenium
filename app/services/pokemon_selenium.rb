@@ -1,6 +1,8 @@
 class PokemonSelenium
+  # url target
+  URL = 'https://goo.gl/Z88qLq'.freeze
+
   def initialize
-    URL = "https://goo.gl/Z88qLq"
     # Capybara makes it convenient to switch between different drivers.
     # It also exposes an API to tweak those drivers with whatever settings you
     # want, or to add your own drivers. This is how to override the selenium
@@ -25,10 +27,9 @@ class PokemonSelenium
     Capybara.javascript_driver = :webkit
   end
 
-
+  # Run service "PokemonSelenium.new.run"
   def run
     session = Capybara::Session.new(:selenium)
     session.visit(URL)
-    sleep(3)
   end
 end
