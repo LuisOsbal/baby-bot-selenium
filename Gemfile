@@ -43,8 +43,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
-  gem 'factory_girl_rails', '~> 4.0'
-  gem 'haml', '~> 4.0', '>= 4.0.7'
   gem 'irbtools', require: 'irbtools/binding'
   gem 'meta_request'
   gem 'peek'
@@ -52,6 +50,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'selenium-webdriver'
+  gem 'geckodriver-helper'
+  gem "poltergeist"
 end
 
 group :development do
